@@ -11,16 +11,19 @@ app = Flask(__name__)
 waiting_exit_confirmation = False
 
 # ===============================
-# DATASET CHATBOT
+# LOAD DATASET JSON (ANTI CRASH VERCEL)
 # ===============================
-# with open("dataset.json", "r", encoding="utf-8") as f:
-#     qa_data = json.load(f)
-base_dir = os.path.dirname(__file__)
-json_path = os.path.join(base_dir, "dataset.json")
+qa_data = []
 
-with open(json_path, encoding="utf-8") as f:
-    qa_data = json.load(f)
+try:
+    base_dir = os.path.dirname(__file__)
+    json_path = os.path.join(base_dir, "dataset.json")
 
+    with open(json_path, encoding="utf-8") as f:
+        qa_data = json.load(f)
+
+except Exception as e:
+    print("Gagal load dataset:", e)
 
 # ===============================
 # PREPROCESSING
@@ -38,7 +41,7 @@ def get_response(user_input):
 
     user_input = preprocess(user_input)
 
-    # JIKA MENUNGGU KONFIRMASI EXIT
+    # KONFIRMASI EXIT
     if waiting_exit_confirmation:
         if user_input in ["ya", "iya", "y", "yes"]:
             waiting_exit_confirmation = False
@@ -81,7 +84,6 @@ def chat():
     return jsonify({"response": response})
 
 # ===============================
-# RUN SERVER
+# NOTE:
+# JANGAN pakai app.run() untuk Vercel
 # ===============================
-# if __name__ == "__main__":
-#     app.run(debug=True)
