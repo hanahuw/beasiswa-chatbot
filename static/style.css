@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* CONTAINER */
+.chat-container {
+    background: #fff;
+    width: 420px;
+    height: 600px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* HEADER */
+.chat-header {
+    background: #5a67d8;
+    color: #fff;
+    padding: 16px;
+}
+
+.chat-header h2 {
+    font-size: 18px;
+}
+
+.chat-header p {
+    font-size: 12px;
+    opacity: 0.9;
+}
+
+/* CHAT AREA */
+.chat-box {
+    flex: 1;
+    padding: 16px;
+    background: #f7f8fc;
+    overflow-y: auto;
+}
+
+/* CHAT BUBBLE */
+.chat {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.chat.user {
+    justify-content: flex-end;
+}
+
+.chat.user span {
+    background: #5a67d8;
+    color: #fff;
+}
+
+.chat.bot {
+    justify-content: flex-start;
+}
+
+.chat.bot span {
+    background: #e2e8f0;
+    color: #333;
+}
+
+.chat span {
+    padding: 10px 14px;
+    border-radius: 14px;
+    max-width: 75%;
+    font-size: 14px;
+}
+
+/* INPUT */
+.chat-input {
+    display: flex;
+    border-top: 1px solid #ddd;
+}
+
+.chat-input input {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    outline: none;
+}
+
+.chat-input button {
+    background: #5a67d8;
+    color: #fff;
+    border: none;
+    padding: 0 20px;
+    cursor: pointer;
+}
+
+.chat-input button:hover {
+    background: #434190;
+}
+.chat-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background-color: #5b5ff7;
+    color: white;
+    padding: 14px;
+}
+
+.logo-unpam {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+    background: white;
+    border-radius: 6px;
+    padding: 4px;
+}
+
+.header-text h2 {
+    margin: 0;
+    font-size: 16px;
+}
+
+.header-text p {
+    margin: 0;
+    font-size: 12px;
+    opacity: 0.9;
+}
+.chat-input input:disabled,
+.chat-input button:disabled {
+    background-color: #ddd;
+    cursor: not-allowed;
+}
+.chat-input button:disabled {
+    background-color: #999;
+}

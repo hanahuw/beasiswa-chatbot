@@ -1,0 +1,167 @@
+[
+  {
+    "intent": "info_beasiswa",
+    "patterns": [
+      "Beasiswa apa saja di UNPAM",
+      "Apa saja beasiswa UNPAM",
+      "UNPAM punya beasiswa apa",
+      "Ada beasiswa apa saja di UNPAM"
+    ],
+    "response": "UNPAM menyediakan Beasiswa Prestasi Akademik, Prestasi Non-Akademik, KIP Kuliah, Beasiswa Kerja Sama/CSR, serta beasiswa eksternal seperti LPDP untuk S2."
+  },
+  {
+    "intent": "beasiswa_prestasi_akademik",
+    "patterns": [
+      "beasiswa prestasi akademik",
+      "beasiswa ipk tinggi",
+      "beasiswa akademik unpam"
+    ],
+    "response": "Beasiswa Prestasi Akademik UNPAM diberikan kepada mahasiswa aktif dengan IPK tinggi, umumnya minimal 3,50, berupa potongan atau pembebasan biaya kuliah."
+  },
+  {
+    "intent": "syarat_prestasi_akademik",
+    "patterns": [
+      "syarat beasiswa prestasi akademik",
+      "syarat beasiswa ipk",
+      "ketentuan beasiswa prestasi"
+    ],
+    "response": "Syarat Beasiswa Prestasi Akademik UNPAM meliputi mahasiswa aktif, IPK minimal 3,50, tidak sedang menerima beasiswa lain, serta melampirkan transkrip nilai."
+  },
+  {
+    "intent": "beasiswa_non_akademik",
+    "patterns": [
+      "beasiswa non akademik",
+      "beasiswa olahraga",
+      "beasiswa seni"
+    ],
+    "response": "UNPAM menyediakan Beasiswa Prestasi Non-Akademik bagi mahasiswa berprestasi di bidang olahraga, seni, atau kegiatan ekstrakurikuler."
+  },
+  {
+    "intent": "kip_kuliah",
+    "patterns": [
+      "kip kuliah",
+      "bidikmisi",
+      "beasiswa kip"
+    ],
+    "response": "UNPAM menerima mahasiswa penerima KIP Kuliah untuk jenjang S1 sesuai dengan ketentuan pemerintah."
+  },
+  {
+    "intent": "syarat_kip",
+    "patterns": [
+      "syarat kip kuliah",
+      "ketentuan kip",
+      "syarat bidikmisi"
+    ],
+    "response": "Syarat KIP Kuliah antara lain berasal dari keluarga kurang mampu, memiliki KIP/KKS atau surat keterangan tidak mampu, serta lulus seleksi masuk UNPAM."
+  },
+  {
+    "intent": "beasiswa_s2",
+    "patterns": [
+      "beasiswa s2",
+      "beasiswa pascasarjana",
+      "beasiswa lpdp"
+    ],
+    "response": "Mahasiswa S2 UNPAM dapat mengajukan beasiswa eksternal seperti LPDP atau beasiswa penelitian dari lembaga pemerintah atau swasta."
+  },
+  {
+    "intent": "cara_daftar_prestasi_akademik",
+    "patterns": [
+      "cara daftar beasiswa prestasi akademik",
+      "daftar beasiswa ipk unpam",
+      "cara mengajukan beasiswa prestasi"
+    ],
+    "response": "Pendaftaran Beasiswa Prestasi Akademik UNPAM dilakukan dengan memantau pengumuman resmi dari kampus atau fakultas. Mahasiswa menyiapkan dokumen seperti transkrip nilai, surat keterangan aktif kuliah, dan formulir pendaftaran, lalu mengikuti seleksi sesuai jadwal yang ditentukan."
+  },
+  {
+    "intent": "cara_daftar_non_akademik",
+    "patterns": [
+      "cara daftar beasiswa non akademik",
+      "cara daftar beasiswa olahraga unpam",
+      "cara daftar beasiswa seni"
+    ],
+    "response": "Pendaftaran Beasiswa Prestasi Non-Akademik UNPAM dilakukan melalui pengumuman kampus. Mahasiswa menyiapkan bukti prestasi non-akademik seperti sertifikat atau piagam, surat keterangan aktif kuliah, dan mengikuti proses seleksi yang ditetapkan."
+  },
+  {
+    "intent": "cara_daftar_kip",
+    "patterns": [
+      "cara daftar kip kuliah",
+      "cara daftar bidikmisi",
+      "alur pendaftaran kip unpam"
+    ],
+    "response": "Pendaftaran KIP Kuliah dilakukan melalui sistem KIP Kuliah nasional sebelum atau saat pendaftaran mahasiswa baru. Calon mahasiswa harus melengkapi data ekonomi, dokumen pendukung, dan mengikuti seleksi masuk UNPAM sesuai ketentuan pemerintah."
+  },
+  {
+    "intent": "cara_daftar_beasiswa_csr",
+    "patterns": [
+      "cara daftar beasiswa csr",
+      "cara daftar beasiswa kerja sama",
+      "beasiswa perusahaan unpam"
+    ],
+    "response": "Pendaftaran Beasiswa CSR atau kerja sama dilakukan dengan mengikuti pengumuman resmi dari UNPAM terkait kerja sama dengan pihak eksternal. Mahasiswa melengkapi dokumen administrasi sesuai persyaratan yang ditentukan oleh penyelenggara beasiswa."
+  },
+  {
+    "intent": "cara_daftar_beasiswa_s2",
+    "patterns": [
+      "cara daftar beasiswa s2",
+      "cara daftar lpdp",
+      "alur pendaftaran beasiswa pascasarjana"
+    ],
+    "response": "Pendaftaran Beasiswa S2 seperti LPDP dilakukan melalui portal resmi penyelenggara beasiswa. Calon penerima menyiapkan dokumen akademik, proposal studi atau riset, serta mengikuti tahapan seleksi sesuai ketentuan yang berlaku."
+  },
+  {
+    "intent": "syarat_prestasi_akademik",
+    "patterns": [
+      "syarat beasiswa prestasi akademik",
+      "persyaratan beasiswa ipk unpam",
+      "ketentuan beasiswa prestasi akademik"
+    ],
+    "response": "Persyaratan Beasiswa Prestasi Akademik UNPAM meliputi mahasiswa aktif, memiliki IPK minimal 3,50, tidak sedang menerima beasiswa lain, melampirkan transkrip nilai, dan mengikuti ketentuan seleksi dari kampus."
+  },
+  {
+    "intent": "syarat_non_akademik",
+    "patterns": [
+      "syarat beasiswa non akademik",
+      "persyaratan beasiswa olahraga",
+      "syarat beasiswa seni unpam"
+    ],
+    "response": "Persyaratan Beasiswa Prestasi Non-Akademik UNPAM meliputi mahasiswa aktif, memiliki bukti prestasi non-akademik seperti sertifikat atau piagam, surat keterangan aktif kuliah, dan memenuhi ketentuan seleksi yang ditetapkan."
+  },
+  {
+    "intent": "syarat_kip",
+    "patterns": [
+      "syarat kip kuliah",
+      "persyaratan bidikmisi",
+      "ketentuan kip unpam"
+    ],
+    "response": "Persyaratan KIP Kuliah antara lain berasal dari keluarga kurang mampu secara ekonomi, memiliki KIP, KKS, atau surat keterangan tidak mampu, lulus seleksi masuk UNPAM, serta memenuhi ketentuan dari pemerintah."
+  },
+  {
+    "intent": "syarat_beasiswa_csr",
+    "patterns": [
+      "syarat beasiswa csr",
+      "persyaratan beasiswa kerja sama",
+      "syarat beasiswa perusahaan unpam"
+    ],
+    "response": "Persyaratan Beasiswa CSR atau kerja sama umumnya meliputi mahasiswa aktif, IPK sesuai ketentuan penyelenggara, surat rekomendasi, serta dokumen administrasi lain sesuai persyaratan pihak pemberi beasiswa."
+  },
+  {
+    "intent": "syarat_beasiswa_s2",
+    "patterns": [
+      "syarat beasiswa s2",
+      "persyaratan lpdp",
+      "ketentuan beasiswa pascasarjana"
+    ],
+    "response": "Persyaratan Beasiswa S2 seperti LPDP meliputi ijazah dan transkrip S1, IPK minimal sesuai ketentuan, sertifikat kemampuan bahasa, proposal studi atau riset, serta mengikuti seluruh tahapan seleksi."
+  },
+  {
+    "intent": "salam",
+    "patterns": [
+      "halo",
+      "hai",
+      "assalamualaikum",
+      "haloo",
+      "helo"
+    ],
+    "response": "Halo! Saya siap membantu informasi beasiswa UNPAM."
+  }
+]

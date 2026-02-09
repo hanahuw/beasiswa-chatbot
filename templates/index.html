@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Chatbot Beasiswa Kampus</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="chat-container">
+    <div class="chat-header">
+        <!-- LOGO UNPAM -->
+        <img 
+            src="{{ url_for('static', filename='logo-unpam.png') }}" 
+            alt="Logo UNPAM" 
+            class="logo-unpam"
+        >
+
+        <div class="header-text">
+            <h2>Chatbot Info Beasiswa UNPAM</h2>
+            <p>Asisten Informasi Beasiswa UNPAM</p>
+        </div>
+    </div>
+
+    <div class="chat-box" id="chatBox">
+        <div class="chat bot">
+            <span>Halo 👋 Silakan tanyakan informasi seputar beasiswa UNPAM.</span>
+        </div>
+    </div>
+
+    <div class="chat-input">
+        <input type="text" id="userInput" placeholder="Ketik pertanyaan..." />
+        <button id="sendBtn">Kirim</button>
+    </div>
+</div>
+
+<script>
+const chatBox = document.getElementById("chatBox");
+const input = document.getElementById("userInput");
+const button = document.getElementById("sendBtn");
+
+button.addEventListener("click", sendMessage);
+input.addEventListener("keypress", function(e) {
+    if (e.key === "Enter") sendMessage();
+});
+
+function sendMessage() {
+    const message = input.value.trim();
+    if (message === "") return;
+
+    chatBox.innerHTML += `
+        <div class="chat user">
+            <span>${message}</span>
+        </div>
+    `;
+
+    input.value = "";
+    chatBox.scrollTop = chatBox.scrollHeight;
+
+    fetch("/chat", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ message: message })
+    })
+    .then(res => res.json())
+    .then(data => {
+    if (data.response === "__EXIT__") {
+        chatBox.innerHTML += `
+            <div class="chat bot">
+                <span>Terima kasih 🙏 Percakapan telah diakhiri.</span>
+            </div>
+        `;
+        input.disabled = true;
+        button.disabled = true;
+        return;
+    }
+
+    chatBox.innerHTML += `
+        <div class="chat bot">
+            <span>${data.response}</span>
+        </div>
+    `;
+    chatBox.scrollTop = chatBox.scrollHeight;
+});
+
+}
+</script>
+
+</body>
+</html>
