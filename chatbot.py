@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, jsonify
 import string
+import os
 import json
 
 app = Flask(__name__)
@@ -12,7 +13,12 @@ waiting_exit_confirmation = False
 # ===============================
 # DATASET CHATBOT
 # ===============================
-with open("dataset.json", "r", encoding="utf-8") as f:
+# with open("dataset.json", "r", encoding="utf-8") as f:
+#     qa_data = json.load(f)
+base_dir = os.path.dirname(__file__)
+json_path = os.path.join(base_dir, "dataset.json")
+
+with open(json_path, encoding="utf-8") as f:
     qa_data = json.load(f)
 
 
